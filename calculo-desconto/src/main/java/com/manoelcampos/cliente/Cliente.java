@@ -1,4 +1,4 @@
-package com.manoelcampos.desconto;
+package com.manoelcampos.cliente;
 
 import java.time.LocalDate;
 
@@ -41,5 +41,10 @@ public class Cliente {
 
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public boolean isAniversario(LocalDate hoje) {
+        return hoje.getDayOfMonth() == dataNascimento.getDayOfMonth() &&
+                hoje.getMonth() == dataNascimento.getMonth();
     }
 }

@@ -23,8 +23,17 @@ O programa deve apenas permitir que seja mudado o algoritmo de cálculo do desco
 
 == Responda
 
-1. Qual padrão de projeto pode ser utilizado no desenvolvimento de uma solução? 
-2. Como poderíamos implementar estes tipos de desconto sem utilizar Padrões de Projetos? 
+1. Qual padrão de projeto pode ser utilizado no desenvolvimento de uma solução?
+
+    Strategy.
+
+2. Como poderíamos implementar estes tipos de desconto sem utilizar Padrões de Projetos?
+
+    Utilizando if/elses aninhados no método `calcularTotal(algumParametro)` de `Venda`, criar variações deste método ou criar usar herança para criar diferentes tipos de `Venda`, cada um aplicando um desconto diferente.
+
 3. Quais os problemas que tal implementação traria?
+
+    Código extremamente acoplado e frágil, exigindo alterar o código existente sempre que houver alguma modificação (como regra de negócio ou remoção de um desconto existente, ou adição de um novo tipo de desconto), aumentando os riscos de quebrar a aplicação.
+
 4. Implemente o projeto e envie o link para repositório no GitHub, onde o README deve conter as respostas.
 
