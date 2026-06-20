@@ -1,5 +1,6 @@
-package com.manoelcampos.message;
+package com.manoelcampos.newsletter;
 
+import com.manoelcampos.message.MessageService;
 import com.manoelcampos.people.Customer;
 
 import java.util.List;
@@ -9,31 +10,25 @@ import java.util.List;
  * utilizando algum {@link MessageService}.
  *
  * @author Manoel Campos da Silva Filho
+ * @author Juno Piazza Lopes
  */
-public class Newsletter {
+public abstract class NewsletterAbstract implements Newsletter {
     private final List<Customer> customers;
-    private WhatsApp whatsapp;
+    private final MessageService messageService;
 
     /**
      * Instancia uma newsletter para envio de mensagens para uma determinada lista de clientes
      * @param customers lista de clientes para enviar mensagens
      */
-    public Newsletter(final List<Customer> customers){
+    public NewsletterAbstract(final List<Customer> customers){
         this.customers = customers;
-        this.whatsapp = new WhatsApp();
+        this.messageService = createMessageService();
     }
 
-    /**
-     * Envia uma mensagem personalizada para uma lista de clientes.
-     * Não é obrigatória a inclusão de marcadores no template.
-     * Um exemplo de template seria:
-     *      Olá #name, seu telefone foi atualizado para #phone.
-     * @param msgTemplate Um template de mensagem com marcações (placeholders)
-     *        que serão substituídos por atributos do cliente de destino.
-     */
-    public void send(final String msgTemplate) {
+    @Override
+    public final void send(final String msgTemplate) {
         for (final Customer customer : customers) {
-            whatsapp.send(customer.getPhone(), formatMsg(customer, msgTemplate));
+            messageService.send(customer, formatMsg(customer, msgTemplate));
         }
     }
 
@@ -52,4 +47,11 @@ public class Newsletter {
             .replaceAll("#email", customer.getEmail())
             .replaceAll("#phone", customer.getPhone());
     }
+
+    /**
+     * Retorna objeto usado para instanciar o atributo {@link #messageService}.
+     *
+     * @return classe concreta do tipo {@link MessageService}
+     */
+    protected abstract MessageService createMessageService();
 }

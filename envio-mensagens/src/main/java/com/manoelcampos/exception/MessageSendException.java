@@ -1,4 +1,6 @@
-package com.manoelcampos.message;
+package com.manoelcampos.exception;
+
+import com.manoelcampos.message.MessageService;
 
 /**
  * Exceção para indicar que houve erro ao tentar enviar uma mensagem por um {@link MessageService}.

@@ -17,9 +17,12 @@ _Aluno: Juno Piazza Lopes_
 
 Os projetos a seguir fazem parte dos exercícios da disciplina `Padrões de Projeto` e estão sendo implementados usando como base os projetos desse link:https://github.com/manoelcampos/padroes-projetos/tree/master/exercicios[repositório] com o objetivo de aprender a aplicar padrões de projeto (_GoF_) para resolver problemas reais.
 
-- [x] link:calculo-desconto[Cálculo de Desconto]
-- [x] link:instanciar-produtos[Instanciando Produtos]
-- [ ] link:envio-mensagens[Envio de Mensagens por diferentes canais]
+- [x] link:calculo-desconto[Cálculo de Desconto] [link:https://kinolien.github.io/gitzip/?download=/JunoPLupus/Exercicios-Padroes-de-Projeto/tree/main/calculo-desconto[zip]]
+
+- [x] link:instanciar-produtos[Instanciando Produtos] [link:https://kinolien.github.io/gitzip/?download=/JunoPLupus/Exercicios-Padroes-de-Projeto/tree/main/instanciar-produtos[zip]]
+
+- [x] link:envio-mensagens[Envio de Mensagens por diferentes canais] [link:https://kinolien.github.io/gitzip/?download=/JunoPLupus/Exercicios-Padroes-de-Projeto/tree/main/envio-mensagens[zip]]
+
 - [ ] link:imposto-renda[Cálculo de Imposto de Renda para Pessoa Física e Jurídica]
 - [ ] link:random-numbers[Bibliotecas para geração de números pseudo-aleatórios]
 - [ ] link:real-random-number-services[Serviços para geração de números realmente aleatórios]

@@ -10,7 +10,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-= Envio de Mensagens
+= Envio de Mensagens [link:https://kinolien.github.io/gitzip/?download=/JunoPLupus/Exercicios-Padroes-de-Projeto/tree/main/envio-mensagens[zip]]
 
 Atualmente, aplicações de diversas plataformas como web e mobile possuem recursos de envio de mensagens por diferentes meios como: email, sms, WhatsApp, notificações push, etc.
 
@@ -28,5 +28,7 @@ Faça as alterações necessárias no projeto atual e implemente um padrão para
 == Responda
 
 1. Qual padrão de projeto pode ser utilizado para resolver este problema? Implemente a solução (não precisa enviar mensagens de fato, apenas simular com prints).
+
+    Factory Method e Template Method.
 
 Implemente o projeto e envie link para repositório no GitHub, onde o README deve conter as respostas.

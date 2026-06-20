@@ -1,18 +1,22 @@
 package com.manoelcampos.message;
 
+import com.manoelcampos.exception.MessageSendException;
+import com.manoelcampos.people.Customer;
+
 /**
  * Envia mensagens pelo WhatsApp.
  * @author Manoel Campos da Silva Filho
+ * @author Juno Piazza Lopes
  */
 public class WhatsApp implements MessageService {
     /**
      * {@inheritDoc}
-     * @param destination telefone de destino da mensagem
+     * @param customer para extrair telefone de destino da mensagem
      * @param msg {@inheritDoc}
      * @throws MessageSendException {@inheritDoc}
      */
     @Override
-    public void send(final String destination, final String msg) throws MessageSendException {
-        System.out.printf("Enviando msg WhatsApp para %s: %s%n", destination, msg);
+    public void send(final Customer customer, final String msg) throws MessageSendException {
+        System.out.printf("Enviando msg WhatsApp para %s: %s%n", customer.getPhone(), msg);
     }
 }

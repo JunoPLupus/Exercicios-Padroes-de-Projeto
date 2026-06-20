@@ -1,7 +1,10 @@
 package com.manoelcampos;
 
+import com.manoelcampos.newsletter.Newsletter;
+import com.manoelcampos.newsletter.NewsletterEmail;
+import com.manoelcampos.newsletter.NewsletterSms;
+import com.manoelcampos.newsletter.NewsletterWhatsapp;
 import com.manoelcampos.people.Customer;
-import com.manoelcampos.message.Newsletter;
 
 import java.util.List;
 
@@ -17,8 +20,13 @@ public class Principal {
             new Customer("Raysa",  "(63) 5555-6666", "raysa@teste.com")
         );
 
-        final Newsletter newsletter = new Newsletter(customers);
+        Newsletter newsletter = new NewsletterWhatsapp(customers);
         final String msgTemplate = "Aproveite as promoções de natal #name.";
         newsletter.send(msgTemplate);
+
+        newsletter = new NewsletterSms(customers);
+        newsletter.send(msgTemplate);
+
+        new NewsletterEmail(customers).send(msgTemplate);
     }
 }
