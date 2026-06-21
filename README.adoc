@@ -15,7 +15,7 @@ endif::[]
 
 _Aluno: Juno Piazza Lopes_
 
-Os projetos a seguir fazem parte dos exercícios da disciplina `Padrões de Projeto` e estão sendo implementados usando como base os projetos desse link:https://github.com/manoelcampos/padroes-projetos/tree/master/exercicios[repositório] com o objetivo de aprender a aplicar padrões de projeto (_GoF_) para resolver problemas reais.
+Os projetos a seguir fazem parte dos exercícios da disciplina `Padrões de Projeto` e estão sendo implementados usando como base os projetos deste link:https://github.com/manoelcampos/padroes-projetos/tree/master/exercicios[repositório] com o objetivo de aprender a aplicar padrões de projeto (_GoF_) para resolver problemas reais.
 
 - [x] link:calculo-desconto[Cálculo de Desconto] [link:https://kinolien.github.io/gitzip/?download=/JunoPLupus/Exercicios-Padroes-de-Projeto/tree/main/calculo-desconto[zip]]
 
